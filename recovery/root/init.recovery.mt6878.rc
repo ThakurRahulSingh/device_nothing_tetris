@@ -1,9 +1,24 @@
+#Set selinux to permissive
+on early-init
+    write /sys/fs/selinux/enforce 0
+
+
 #USB File
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.controller "11201000.usb0"
 
 on fs && property:ro.debuggable=0
+
+# Metadata encryption
+on early-fs
+    start vold
+
+on late-fs
+    mount_all /first_stage_ramdisk/fstab.mt6878 --late
+
+on post-fs
+    start boot-hal-1-2
 
 on early-init
     mkdir /mnt/product

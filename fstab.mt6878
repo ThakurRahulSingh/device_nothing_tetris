@@ -1,22 +1,22 @@
 # Android fstab file
 
 # Logical Partitions
-system      /system      erofs   ro   wait,logical,first_stage_mount,slotselect
-system      /system      ext4    ro   wait,logical,first_stage_mount,slotselect
-vendor      /vendor      erofs   ro   wait,logical,first_stage_mount,slotselect
-vendor      /vendor      ext4    ro   wait,logical,first_stage_mount,slotselect
-product     /product     erofs   ro   wait,logical,first_stage_mount,slotselect
-product     /product     ext4    ro   wait,logical,first_stage_mount,slotselect
-system_ext  /system_ext  erofs   ro   wait,logical,first_stage_mount,slotselect
-system_ext  /system_ext  ext4    ro   wait,logical,first_stage_mount,slotselect
-odm         /odm         erofs   ro   wait,logical,first_stage_mount,slotselect
-odm         /odm         ext4    ro   wait,logical,first_stage_mount,slotselect
-vendor_dlkm /vendor_dlkm erofs   ro   wait,logical,first_stage_mount,slotselect
-vendor_dlkm /vendor_dlkm ext4    ro   wait,logical,first_stage_mount,slotselect
-odm_dlkm    /odm_dlkm    erofs   ro   wait,logical,first_stage_mount,slotselect
-odm_dlkm    /odm_dlkm    ext4    ro   wait,logical,first_stage_mount,slotselect
-system_dlkm /system_dlkm erofs   ro   wait,logical,first_stage_mount,slotselect
-system_dlkm /system_dlkm ext4    ro   wait,logical,first_stage_mount,slotselect
+system      /system      erofs   ro                              wait,logical,first_stage_mount,slotselect
+system      /system      ext4    ro,barrier=1,discard            wait,logical,first_stage_mount,slotselect
+vendor      /vendor      erofs   ro                              wait,logical,first_stage_mount,slotselect
+vendor      /vendor      ext4    ro,barrier=1,discard            wait,logical,first_stage_mount,slotselect
+product     /product     erofs   ro                              wait,logical,first_stage_mount,slotselect
+product     /product     ext4    ro,barrier=1,discard            wait,logical,first_stage_mount,slotselect
+system_ext  /system_ext  erofs   ro                              wait,logical,first_stage_mount,slotselect
+system_ext  /system_ext  ext4    ro,barrier=1,discard            wait,logical,first_stage_mount,slotselect
+odm         /odm         erofs   ro                              wait,logical,first_stage_mount,slotselect
+odm         /odm         ext4    ro,barrier=1,discard            wait,logical,first_stage_mount,slotselect
+vendor_dlkm /vendor_dlkm erofs   ro                              wait,logical,first_stage_mount,slotselect
+vendor_dlkm /vendor_dlkm ext4    ro,barrier=1,discard            wait,logical,first_stage_mount,slotselect
+odm_dlkm    /odm_dlkm    erofs   ro                              wait,logical,first_stage_mount,slotselect
+odm_dlkm    /odm_dlkm    ext4    ro,barrier=1,discard            wait,logical,first_stage_mount,slotselect
+system_dlkm /system_dlkm erofs   ro                              wait,logical,first_stage_mount,slotselect
+system_dlkm /system_dlkm ext4    ro,barrier=1,discard            wait,logical,first_stage_mount,slotselect
 
 # Metadata and Userdata
 /dev/block/by-name/metadata /metadata f2fs noatime,nosuid,nodev,discard,sync wait,check,formattable,first_stage_mount
