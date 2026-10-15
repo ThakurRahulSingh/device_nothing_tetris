@@ -1,4 +1,4 @@
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_tetris.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_Tetris.mk
 
-COMMON_LUNCH_CHOICES := twrp_tetris-eng
+COMMON_LUNCH_CHOICES := twrp_Tetris-eng
