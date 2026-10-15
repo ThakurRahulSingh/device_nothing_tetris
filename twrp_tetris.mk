@@ -9,11 +9,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device specific configs
-$(call inherit-product, device/nothing/Tetris/device.mk)
+$(call inherit-product, device/nothing/tetris/device.mk)
 
 # Device identifier
-PRODUCT_DEVICE := Tetris
-PRODUCT_NAME := twrp_Tetris
+PRODUCT_DEVICE := tetris
+PRODUCT_NAME := twrp_tetris
 PRODUCT_BRAND := Nothing
 PRODUCT_MODEL := A015
 PRODUCT_MANUFACTURER := Nothing

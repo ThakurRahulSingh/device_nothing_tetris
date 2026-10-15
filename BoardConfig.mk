@@ -4,14 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/nothing/Tetris
-KERNEL_PATH := device/nothing/Tetris/prebuilt
+DEVICE_PATH := device/nothing/tetris
+KERNEL_PATH := device/nothing/tetris/prebuilt
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Assertation
-TARGET_OTA_ASSERT_DEVICE := Tetris
+TARGET_OTA_ASSERT_DEVICE := Tetris,tetris
 
 # A/B
 AB_OTA_UPDATER := true
