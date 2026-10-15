@@ -12,7 +12,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/cmf/tetris/device.mk)
 
 # Device identifier
-PRODUCT_DEVICE := tetris
+PRODUCT_DEVICE := Tetris
 PRODUCT_NAME := twrp_tetris
 PRODUCT_BRAND := Nothing
 PRODUCT_MODEL := A015

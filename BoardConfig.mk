@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/cmf/tetris
-KERNEL_PATH := device/cmf/tetris/prebuilt
+DEVICE_PATH := device/nothing/tetris
+KERNEL_PATH := device/nothing/tetris/prebuilt
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -38,7 +38,7 @@ TARGET_CPU_VARIANT := cortex-a55
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := tetris
+TARGET_BOOTLOADER_BOARD_NAME := Tetris
 TARGET_NO_BOOTLOADER := true
 
 # Resolution
